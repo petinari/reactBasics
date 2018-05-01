@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person'
 
+
 class App extends Component {
   state = {
     person: [
@@ -44,7 +45,7 @@ class App extends Component {
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
     }
 
 
@@ -52,7 +53,7 @@ class App extends Component {
 
     if (this.state.showPerson) {
       persons = (
-        <div>
+        <div>S
           {
             this.state.person.map(p => {
               return <Person
@@ -66,6 +67,7 @@ class App extends Component {
         </div>
       )
       style.backgroundColor = 'red'
+
     }
 
     let classes = ['red', 'bold'].join(' ')
@@ -75,11 +77,13 @@ class App extends Component {
     }
 
     return (
+
       <div className="App">
         <h1 className={classes}>Hi, I'm a react App</h1>
         <button style={style} onClick={this.togglePersonsHandler}>Switch Name</button>
         {persons}
       </div>
+
     );
   }
 }
