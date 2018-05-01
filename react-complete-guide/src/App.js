@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classesCSS from  './App.css';
 import Person from './Person/Person'
 
 
@@ -70,7 +70,7 @@ class App extends Component {
 
     }
 
-    let classes = ['red', 'bold'].join(' ')
+    let classes = [classesCSS.red, classesCSS.bold].join(' ')
 
     if (this.state.person.length <= 1) {
       classes = null
@@ -78,7 +78,7 @@ class App extends Component {
 
     return (
 
-      <div className="App">
+      <div className={classesCSS.App}>
         <h1 className={classes}>Hi, I'm a react App</h1>
         <button style={style} onClick={this.togglePersonsHandler}>Switch Name</button>
         {persons}
@@ -88,4 +88,4 @@ class App extends Component {
   }
 }
 
-export default App;
+  export default App;
